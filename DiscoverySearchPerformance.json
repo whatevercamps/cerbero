@@ -1,4 +1,11 @@
 {
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "DiscoverySearchPerformance",
+    "format": "jsonschema",
+    "version": "3-0-1"
+  },
   "description": "Schema to track search performance",
   "properties": {
     "searchTarget": {
@@ -61,6 +68,9 @@
     "results": {
       "type": "number"
     },
+    "resultsOpen": {
+      "type": "number"
+    },
     "aggregations": {
       "type": "boolean"
     },
@@ -104,12 +114,5 @@
   "type": "object",
   "required": [
     "searchId"
-  ],
-  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
-  "self": {
-    "vendor": "com.torrelabs",
-    "name": "DiscoverySearchPerformance",
-    "format": "jsonschema",
-    "version": "3-0-0"
-  }
+  ]
 }
