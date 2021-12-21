@@ -1,0 +1,115 @@
+{
+  "description" : "Schema to track search performance",
+  "properties" : {
+    "searchTarget" : {
+      "type" : "string"
+    },
+    "searchId" : {
+      "type" : "string"
+    },
+    "searchSessionId" : {
+      "type" : "string"
+    },
+    "serverSessionId" : {
+      "type" : "string"
+    },
+    "responseTime" : {
+      "type" : "number"
+    },
+    "filterCompensation" : {
+      "type" : "string"
+    },
+    "filterCompensationRange" : {
+      "type" : "string"
+    },
+    "filterJob" : {
+      "type" : "string"
+    },
+    "filterLocation" : {
+      "type" : "string"
+    },
+    "filterLanguages" : {
+      "type" : "string"
+    },
+    "filterName" : {
+      "type" : "string"
+    },
+    "filterOpportunityType" : {
+      "type" : "string"
+    },
+    "filterOrganization" : {
+      "type" : "string"
+    },
+    "filterRemoter" : {
+      "type" : "string"
+    },
+    "filterRole" : {
+      "type" : "string"
+    },
+    "filterSignaledBy" : {
+      "type" : "string"
+    },
+    "filterSignalersOf" : {
+      "type" : "string"
+    },
+    "filterSkill" : {
+      "type" : "string"
+    },
+    "filterSkillRole" : {
+      "type" : "string"
+    },
+    "results" : {
+      "type" : "number"
+    },
+    "aggregations" : {
+      "type" : "boolean"
+    },
+    "eventText" : {
+      "type" : "string"
+    },
+    "sendAt" : {
+      "type" : "string"
+    },
+    "subjectId" : {
+      "type" : "number"
+    },
+    "tester" : {
+      "type" : "boolean"
+    },
+    "filterBestFor" : {
+      "type" : "string"
+    },
+    "filterDreamJobs" : {
+      "type" : "string"
+    },
+    "filterRemote" : {
+      "type" : "string"
+    },
+    "filterStatus" : {
+      "type" : "string"
+    },
+    "filterTimezone" : {
+      "type" : "string"
+    },
+    "source" : {
+      "description" : "Source from where the search was started",
+      "type" : [
+        "string",
+        "null"
+      ],
+      "maxLength" : 120
+    }
+  },
+  "additionalProperties" : true,
+  "type" : "object",
+  "required" : [
+    "searchId"
+  ],
+  "$schema" : "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self" : {
+    "vendor" : "com.torrelabs",
+    "name" : "DiscoverySearchPerformance",
+    "format" : "jsonschema",
+    "version" : "3-0-0"
+  }
+}
