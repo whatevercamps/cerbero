@@ -6,7 +6,7 @@
         "format": "jsonschema",
         "version": "1-0-0"
     },
-    "description": "Schema for providing an example of an event schema",
+    "description": "Schema for connecting a new network contacts suggested by users",
     "properties": {
         "source": {
             "description": "Source of the event in the UI",
