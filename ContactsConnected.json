@@ -8,12 +8,7 @@
     },
     "description": "Schema for providing an example of an event schema",
     "properties": {
-        "channel": {
-            "description": "Source channel of the contacts connected",
-            "type": "string",
-            "maxLength": 50
-        },
-        "source": {
+        "contactsSource": {
             "description": "Source of the event in the UI",
             "type": ["string", "null"],
             "maxLength": 50
@@ -31,5 +26,5 @@
     },
     "additionalProperties": true,
     "type": "object",
-    "required": ["channel", "userGgId"]
+    "required": ["userGgId"]
 }
