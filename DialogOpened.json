@@ -1,0 +1,20 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+        "vendor": "com.torrelabs",
+        "name": "DialogOpened",
+        "format": "jsonschema",
+        "version": "1-0-0"
+    },
+    "description": "Schema for tracking the opened dialogs in the plaftorm",
+    "properties": {
+        "dialogName": {
+            "description": "Name of the dialog that the user opened",
+            "type": "string",
+            "maxLength": 50
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "required": ["dialogName"]
+}
