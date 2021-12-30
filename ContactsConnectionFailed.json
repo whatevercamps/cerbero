@@ -6,7 +6,7 @@
         "format": "jsonschema",
         "version": "1-0-0"
     },
-    "description": "Schema for providing an example of an event schema",
+    "description": "Schema for contacts connected un-succesfully with torre",
     "properties": {
         "contactsSource": {
             "description": "Source of the event in the UI",
