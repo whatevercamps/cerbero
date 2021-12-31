@@ -1,0 +1,35 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+        "vendor": "com.torrelabs",
+        "name": "ConnectionHighlightsRequested",
+        "format": "jsonschema",
+        "version": "1-0-0"
+    },
+    "description": "Schema for tracking the request of highlights connection between users",
+    "properties": {
+        "sourceType": {
+            "description": "Source type of the connection: user or team",
+            "type": ["string", "null"],
+            "maxLength": 50
+        },
+        "sourceGgId": {
+            "description": "GgId of the user that makes the connection",
+            "type": "string",
+            "maxLength": 50
+        },
+        "targetType": {
+            "description": "Target type of the connection: user or team",
+            "type": ["string", "null"],
+            "maxLength": 50
+        },
+        "targetGgId": {
+            "description": "GgId of the user that's the target of the connection",
+            "type": ["string", "null"],
+            "maxLength": 50
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "required": ["sourceGgId"]
+}
