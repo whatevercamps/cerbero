@@ -25,11 +25,11 @@
         },
         "targetGgId": {
             "description": "GgId of the user that's the target of the connection",
-            "type": "string",
+            "type": ["string", "null"],
             "maxLength": 50
         }
     },
     "additionalProperties": true,
     "type": "object",
-    "required": ["sourceGgId", "targetGgId"]
+    "required": ["sourceGgId"]
 }
