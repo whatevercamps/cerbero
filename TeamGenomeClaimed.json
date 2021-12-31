@@ -1,0 +1,28 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+        "vendor": "com.torrelabs",
+        "name": "TeamGenomeClaimed",
+        "format": "jsonschema",
+        "version": "1-0-0"
+    },
+    "description": "Schema to track team genome claims",
+    "properties": {
+        "sourceGgId": {
+            "description": "The GgId of the user who set the preferences",
+            "type": "string",
+            "maxLength": 255
+        },
+        "organizationPublicId": {
+            "description": "The public ID of the genome's organization",
+            "type": "string",
+            "maxLength": 255
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "required": [
+        "sourceGgId",
+        "organizationPublicId"
+    ]
+}
