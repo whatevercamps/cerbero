@@ -1,32 +1,44 @@
 {
-  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
-  "self": {
-    "vendor": "com.torrelabs",
-    "name": "PreferencesSet",
-    "format": "jsonschema",
-    "version": "1-0-0"
-  },
-  "description": "Schema to track the set of preferences a user has set",
-  "properties": {
-    "field": {
-      "description": "The name of the field that was set",
-      "type": "string",
-      "maxLength": 35
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+      "vendor": "com.torrelabs",
+      "name": "PreferencesSet",
+      "format": "jsonschema",
+      "version": "2-0-0"
     },
-    "value": {
-      "description": "The value that was set",
-      "type": ["string", "null"],
-      "maxLength": 2000
+    "description": "Schema to track the set of preferences a user has set",
+    "properties": {
+        "id": {
+            "description": "The unique id",
+            "type": ["string", "null"],
+            "maxLength": 255
+        },
+        "interest": {
+            "description": "The interest",
+            "type": ["string", "null"],
+            "maxLength": 255
+        },
+        "field": {
+            "description": "The name of preference that was changed",
+            "type": "string",
+            "maxLength": 35
+        },
+        "data": {
+            "description": "The new value of the preference",
+            "type": ["boolean", "number", "string", "null"],
+            "maxLength": 2000,
+            "minimum": 0,
+            "maximum": 999999
+        },
+        "source": {
+            "description": "The source of the change",
+            "type": ["string", "null"],
+            "maxLength": 255
+        }
     },
-    "interest": {
-      "description": "The interest that was set",
-      "type": ["string", "null"],
-      "maxLength": 75
-    }
-  },
-  "additionalProperties": true,
-  "type": "object",
-  "required": [
-    "field"
-  ]
-}
+    "additionalProperties": true,
+    "type": "object",
+    "required": [
+      "field"
+    ]
+  }
