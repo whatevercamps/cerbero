@@ -35,10 +35,10 @@
             "maximum": 1000000000000,
             "type": "number"
         },
-        "externalApplicationUrl ": {
+        "externalApplicationUrl": {
             "description": "External URL of the opportunity (This URL is used to apply to the opportunity outside of Torre)",
             "maxLength": 5000,
-            "type": ["string", "null"]
+            "type": "string"
         },
         "trackerLocation ": {
             "description": "External URL of the opportunity (This URL to apply to the opportinuty outside of Torre)",
