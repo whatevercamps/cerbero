@@ -12,19 +12,9 @@
             "description": "Test that the user answered:Professional culture or personality traits",
             "type": "string",
             "maxLength": 50
-        },
-        "sourceGgId": {
-            "description": "GgId of the user that answered the test",
-            "type": "string",
-            "maxLength": 50
-        },
-        "targetGgId": {
-            "description": "GgId of the user that was the target of the test",
-            "type": ["string", "null"],
-            "maxLength": 50
         }
     },
     "additionalProperties": true,
     "type": "object",
-    "required": ["sourceGgId","test"]
+    "required": ["test"]
 }

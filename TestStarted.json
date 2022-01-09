@@ -4,7 +4,7 @@
         "vendor": "com.torrelabs",
         "name": "TestStarted",
         "format": "jsonschema",
-        "version": "1-0-0"
+        "version": "2-0-0"
     },
     "description": "Schema for tracking the tests that the user starts in the genome",
     "properties": {
@@ -12,19 +12,9 @@
             "description": "Test that the user started: Professional culture or personality traits",
             "type": "string",
             "maxLength": 50
-        },
-        "sourceGgId": {
-            "description": "GgId of the user that started the test",
-            "type": "string",
-            "maxLength": 50
-        },
-        "targetGgId": {
-            "description": "GgId of the user that was the target of the test",
-            "type": ["string", "null"],
-            "maxLength": 50
         }
     },
     "additionalProperties": true,
     "type": "object",
-    "required": ["sourceGgId","test"]
+    "required": ["test"]
 }
