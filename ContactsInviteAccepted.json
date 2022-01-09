@@ -12,22 +12,7 @@
             "description": "Id of the invite made by the user",
             "type": ["string", "null"],
             "maxLength": 50
-        },
-        "sourceGgId": {
-            "description": "GgId of the user that made the invite",
-            "type": "string",
-            "maxLength": 50
-        },
-        "targetGgId": {
-            "description": "GgId of the user that was the target of the invite",
-            "type": ["string", "null"],
-            "maxLength": 50
-        },
-        "targetContactId": {
-            "description": "Contact Id of the user invited",
-            "type": ["string", "null"],
-            "maxLength": 50
-        },
+        }
         "medium": {
             "description": "Medium of the invitation: SMS or EMAIL",
             "type": ["string", "null"],
