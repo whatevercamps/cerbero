@@ -4,7 +4,7 @@
         "vendor": "com.torrelabs",
         "name": "TestAnswered",
         "format": "jsonschema",
-        "version": "1-0-0"
+        "version": "2-0-0"
     },
     "description": "Schema for tracking the test answered by the user",
     "properties": {
