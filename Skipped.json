@@ -1,0 +1,20 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+        "vendor": "com.torrelabs",
+        "name": "Skipped",
+        "format": "jsonschema",
+        "version": "1-0-0"
+    },
+    "description": "Schema for tracking the skip event",
+    "properties": {
+        "elementName": {
+            "description": "Name of the element that got skipped",
+            "type": "string",
+            "maxLength": 50
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "required": ["elementName"]
+}
