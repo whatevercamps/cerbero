@@ -1,0 +1,52 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+        "vendor": "com.torrelabs",
+        "name": "UserAppliedToPokedexApplication",
+        "format": "jsonschema",
+        "version": "1-0-0"
+    },
+    "description": "Schema for providing an example of an event schema",
+    "properties": {
+        "username ": {
+            "description": "Username of the user that applied to a pokedex application",
+            "type": ["string", "null"],
+            "maxLength": 50
+        },
+        "email": {
+            "description": "Email of the user that applied to a pokedex application",
+            "type": ["string", "null"],
+            "maxLength": 100
+        },
+        "phoneNumber": {
+            "description": "Phone number of the user that applied to a pokedex application",
+            "type": ["string", "null"],
+            "maxLength": 50
+        },
+        "ggId": {
+            "description": "ggId (Unique identifier) of the user that applied to a pokedex application",
+            "minimum": 0,
+            "maximum": 1000000000000,
+            "type": "number"
+        },
+        "opportunityId": {
+            "description": "Id (Opportunity Unique identifier) of the opportunity to which the user applied",
+            "minimum": 0,
+            "maximum": 1000000000000,
+            "type": "number"
+        },
+        "externalApplicationUrl": {
+            "description": "External URL of the opportunity (This URL is used to apply to the opportunity outside of Torre)",
+            "maxLength": 5000,
+            "type": "string"
+        },
+        "trackerLocation ": {
+            "description": "External URL of the opportunity (This URL to apply to the opportinuty outside of Torre)",
+            "maxLength": 100,
+            "type": ["string", "null"]
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "required": ["ggId", "opportunityId", "externalApplicationUrl"]
+}

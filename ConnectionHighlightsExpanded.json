@@ -2,19 +2,19 @@
     "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
     "self": {
         "vendor": "com.torrelabs",
-        "name": "TestAnswered",
+        "name": "ConnectionHighlightsExpanded",
         "format": "jsonschema",
-        "version": "2-0-0"
+        "version": "1-0-0"
     },
-    "description": "Schema for tracking the test answered by the user",
+    "description": "Schema for tracking the event of expanded the connection highlights between users.",
     "properties": {
-        "test": {
-            "description": "Test that the user answered:Professional culture or personality traits",
+        "pageType": {
+            "description": "Page where the expansion happened: job post, search or genome",
             "type": "string",
             "maxLength": 50
         }
     },
     "additionalProperties": true,
     "type": "object",
-    "required": ["test"]
+    "required": ["pageType"]
 }
