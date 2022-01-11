@@ -12,7 +12,7 @@
             "description": "Id of the invite made by the user",
             "type": ["string", "null"],
             "maxLength": 50
-        }
+        },
         "medium": {
             "description": "Medium of the invitation: SMS or EMAIL",
             "type": ["string", "null"],
