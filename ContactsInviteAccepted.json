@@ -4,7 +4,7 @@
         "vendor": "com.torrelabs",
         "name": "ContactInviteAccepted",
         "format": "jsonschema",
-        "version": "1-0-0"
+        "version": "2-0-0"
     },
     "description": "Schema for tracking the invites that got accepted from the contacts of the user",
     "properties": {
