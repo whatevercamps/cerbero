@@ -25,6 +25,5 @@
         }        
     },
     "additionalProperties": true,
-    "type": "object",
-    "required": ["sourceGgId"]
+    "type": "object"
 }
