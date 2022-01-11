@@ -6,7 +6,7 @@
         "format": "jsonschema",
         "version": "2-0-0"
     },
-    "description": "Schema for tracking the invites that got accepted from the contacts of the user",
+    "description": "Schema for tracking the invites that got accepted from the contacts",
     "properties": {
         "inviteId": {
             "description": "Id of the invite made by the user",
