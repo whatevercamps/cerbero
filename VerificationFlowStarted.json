@@ -8,22 +8,18 @@
     },
     "description": "Schema for tracking the start of the verification flow",
     "properties": {
-        "experienceId": {
-            "description": "Id of the experience to be verified",
-            "type": ["string", "null"],
-            "maxLength": 50
-        },
         "flow": {
             "description": "Flow from verification: ASK, VERIFY",
-            "type": ["string", "null"],
+            "type": "string",
             "maxLength": 50
         },
         "targetGgId": {
-            "description": "Name of the flow where the invite is made",
+            "description": "Target ggId of the verification",
             "type": ["string", "null"],
             "maxLength": 50
         }        
     },
     "additionalProperties": true,
-    "type": "object"
+    "type": "object",
+    "required": ["flow"]
 }

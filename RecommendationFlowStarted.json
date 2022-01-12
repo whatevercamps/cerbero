@@ -15,11 +15,11 @@
         },
         "targetGgId": {
             "description": "Target ggId of the recommendation",
-            "type": "string",
+            "type": ["string", "null"],
             "maxLength": 50
         }
     },
     "additionalProperties": true,
     "type": "object",
-    "required": ["flow", "targetGgId"]
+    "required": ["flow"]
 }
