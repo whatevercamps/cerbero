@@ -171,7 +171,7 @@
             "maximum": 1000000000000
 		},
 		"resultsOpen": {
-			"description": "",
+			"description": "Number of open results for job suggestions",
 			"type": [
 				"number",
 				"null"
