@@ -1,0 +1,38 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+        "vendor": "com.torrelabs",
+        "name": "VerificationFlowStepEntered",
+        "format": "jsonschema",
+        "version": "1-0-0"
+    },
+    "description": "Schema to track the steps the user interacted in the verification flow",
+    "properties": {
+        "stepNumber": {
+            "description": "number of the step where the user interacted",
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 50
+        },
+        "totalSteps": {
+            "description": "number of total steps that the verification have",
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 50
+        },
+        "stepName": {
+            "description": "Name of the step",
+            "type": "string",
+            "maxLength": 50
+        },
+        "completionRate": {
+            "description": "Completion percentage of the verification",
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 50
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "required": ["stepName"]
+}
