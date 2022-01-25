@@ -19,7 +19,7 @@
           "maxLength": 50
       },
       "genomeType": {
-          "description": "Type of the genome signaled",
+          "description": "Type of the genome signaled: profesional or team-genome",
           "type": ["string", "null"],
           "maxLength": 50
       },
