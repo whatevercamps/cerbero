@@ -1,0 +1,22 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+        "vendor": "com.torrelabs",
+        "name": "TestStarted",
+        "format": "jsonschema",
+        "version": "2-0-0"
+    },
+    "description": "Schema for tracking the test started event in genome",
+    "properties": {
+        "test": {
+            "description": "Test that the user started: Professional culture or personality traits",
+            "type": "string",
+            "maxLength": 50
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "required": [
+        "test"
+    ]
+}
