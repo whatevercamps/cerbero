@@ -4,18 +4,18 @@
       "vendor": "com.torrelabs",
       "name": "RecommendationDeleted",
       "format": "jsonschema",
-      "version": "1-0-0"
+      "version": "2-0-0"
   },
   "description": "Schema for tracking the delete event of a recommendation",
   "properties": {
       "sourceGgId": {
           "description": "GgId of the user that made the recommendation on the genome",
-          "type": "string",
+          "type": ["string", "null"],
           "maxLength": 50
       },
       "targetGgId": {
           "description": "GgId of the user that recieved the recommendation",
-          "type": "string",
+          "type": ["string", "null"],
           "maxLength": 50
       },
       "recommendationId": {
@@ -26,5 +26,5 @@
   },
   "additionalProperties": true,
   "type": "object",
-  "required": ["recommendationId", "sourceGgId", "targetGgId"]
+  "required": ["recommendationId"]
 }
