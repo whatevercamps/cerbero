@@ -6,7 +6,7 @@
         "format": "jsonschema",
         "version": "3-0-0"
     },
-    "description": "Schema for providing an example of an event schema",
+    "description": "Schema that saves all the opportunity applications made through pokedex",
     "properties": {
         "applicantUsername": {
             "description": "Username of the user that applied to a pokedex application",
