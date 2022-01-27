@@ -4,11 +4,11 @@
         "vendor": "com.torrelabs",
         "name": "UserAppliedToPokedexApplication",
         "format": "jsonschema",
-        "version": "1-0-0"
+        "version": "3-0-0"
     },
-    "description": "Schema for providing an example of an event schema",
+    "description": "Schema that saves all the opportunity applications made through pokedex",
     "properties": {
-        "username ": {
+        "applicantUsername": {
             "description": "Username of the user that applied to a pokedex application",
             "type": ["string", "null"],
             "maxLength": 50
@@ -40,10 +40,15 @@
             "maxLength": 5000,
             "type": "string"
         },
-        "trackerLocation ": {
+        "trackerLocation": {
             "description": "External URL of the opportunity (This URL to apply to the opportinuty outside of Torre)",
             "maxLength": 100,
             "type": ["string", "null"]
+        },
+        "sharingToken": {
+            "description": "The sharing token belongs to the poster member of the opportunity",
+            "type": ["string", "null"],
+            "maxLength": 50
         }
     },
     "additionalProperties": true,
