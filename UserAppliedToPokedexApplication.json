@@ -4,7 +4,7 @@
         "vendor": "com.torrelabs",
         "name": "UserAppliedToPokedexApplication",
         "format": "jsonschema",
-        "version": "2-0-1"
+        "version": "3-0-0"
     },
     "description": "Schema for providing an example of an event schema",
     "properties": {
