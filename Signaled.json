@@ -4,42 +4,37 @@
     "vendor": "com.torrelabs",
     "name": "Signaled",
     "format": "jsonschema",
-    "version": "2-0-1"
+    "version": "3-0-0"
   },
-  "description": "Schema for tracking the delete event of a recommendation",
+  "description": "Schema for tracking the signal between users and genome types",
   "properties": {
-    "type": {
-      "description": "Type of the singal: back or first",
+    "signalType": {
+      "description": "Type of the signal: signal, unsignal, signal-back",
       "type": "string",
       "maxLength": 80
     },
     "targetGenomeType": {
       "description": "Type of the signaled genome (person/team)",
-      "type": "string",
+      "type": ["string","null"],
       "maxLength": 80
     },
     "sourceGenomeType": {
       "description": "Type of the signaled genome (person/team)",
-      "type": "string",
-      "maxLength": 80
-    },
-    "sourceId": {
-      "description": "Subject id for the user who sent the signal",
-      "type": "string",
-      "maxLength": 80
-    },
-    "targetId": {
-      "description": "Subject id for the user who got the signal",
       "type": ["string","null"],
       "maxLength": 80
     },
-    "genomeType": {
-      "description": "Type of the genome signaled: profesional or team-genome",
-      "type": ["string", "null"],
-      "maxLength": 50
+    "sourceGgId": {
+      "description": "Subject id for the user who sent the signal",
+      "type": ["string","null"],
+      "maxLength": 80
+    },
+    "targetGgId": {
+      "description": "Subject id for the user who got the signal",
+      "type": ["string","null"],
+      "maxLength": 80
     }
   },
   "additionalProperties": true,
   "type": "object",
-  "required": ["targetGenomeType","sourceGenomeType","sourceId"]
+  "required": ["signalType"]
 }

@@ -6,19 +6,40 @@
         "format": "jsonschema",
         "version": "1-0-0"
     },
-    "description": "Schema for tracking the actions of the user in the onboarding",
+    "description": "Schema for tracking the actions of the user in the onboarding flows",
     "properties": {
-        "onboarding": {
-            "description": "Property of the event to describe if the user is doing the onboarding",
-            "type": "boolean"
+        "userGgId":{
+          "description": "GgId of the user that interacted with the onboarding flow",
+          "type": ["string","null"],
+          "maxLength": 50
+        },
+        "onboardingFlow": {
+            "description": "Property of the event to describe in wich flow the user is doing the onboarding",
+            "type": "string",
+            "maxLength": 100
         },
         "step": {
             "description": "Step of the onboarding process",
             "type":["string","null"],
-            "maxLength": 50
+            "maxLength": 100
+        },
+        "elementName": {
+          "description": "Name of the element interacted",
+          "type": ["string","null"],
+          "maxLength": 100
+        },
+        "elementType":{
+          "description": "Type of the element interacted",
+          "type": ["string","null"],
+          "maxLength": 100
+        },
+        "elementValue":{
+          "description": "Value of the element interacted if apply",
+          "type": ["string","null"],
+          "maxLength": 500
         }
     },
     "additionalProperties": true,
     "type": "object",
-    "required": ["onboarding"]
+    "required": ["onboardingFlow"]
 }
