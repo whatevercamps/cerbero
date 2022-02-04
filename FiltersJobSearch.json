@@ -4,7 +4,7 @@
       "vendor": "com.torrelabs",
       "name": "FiltersJobSearch",
       "format": "jsonschema",
-      "version": "1-0-0"
+      "version": "1-0-1"
   },
   "description": "Schema for tracking the use of the filters (toggles) in the job search page",
   "properties": {
@@ -18,7 +18,7 @@
         "type": "boolean"
       }
   },
-  "additionalProperties": false,
+  "additionalProperties": true,
   "type": "object",
   "required": ["filterName", "filterEnabled"]
 }
