@@ -1,0 +1,45 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "ApplicationActionPerformed",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking the interaction of the user inside the job application",
+  "properties": {
+    "userGgId": {
+      "description": "GgId of the user that interacted with the application flow",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "opportunityId": {
+      "description": "Id of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "step": {
+      "description": "Step of the application process",
+      "type": ["string", "null"],
+      "maxLength": 5
+    },
+    "elementName": {
+      "description": "Name of the element interacted",
+      "type": ["string", "null"],
+      "maxLength": 100
+    },
+    "elementType": {
+      "description": "Type of the element interacted",
+      "type": ["string", "null"],
+      "maxLength": 100
+    },
+    "elementValue": {
+      "description": "Value of the element interacted if apply",
+      "type": ["string", "null"],
+      "maxLength": 500
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": ["actionType", "userGgid"]
+}
