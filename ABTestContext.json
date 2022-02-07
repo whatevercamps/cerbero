@@ -1,0 +1,30 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "ABTestContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Context for the AB test made by the team",
+  "properties": {
+    "experimentName": {
+      "description": "Name of the experiment name",
+      "type": "string",
+      "maxLength": 80
+    },
+    "testCampaign": {
+      "description": "Campaign name for the test",
+      "type": ["string", "null"],
+      "maxLength": 80
+    },
+    "variantValue": {
+      "description": "Value of the variant",
+      "type": "string",
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": ["experimentName", "variantValue"]
+}
