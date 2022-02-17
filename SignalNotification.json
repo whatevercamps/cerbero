@@ -2,17 +2,12 @@
   "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
   "self": {
     "vendor": "com.torrelabs",
-    "name": "Signal",
+    "name": "SignalNotification",
     "format": "jsonschema",
     "version": "1-0-0"
   },
-  "description": "Schema for tracking the signal between users and genome types",
+  "description": "Schema for tracking the signal notification between users or teams",
   "properties": {
-    "signalType": {
-      "description": "Type of the signal: signal, unsignal, signal-back",
-      "type": "string",
-      "maxLength": 80
-    },
     "targetGenomeType": {
       "description": "Type of the signaled genome (person/team)",
       "type": ["string","null"],
@@ -32,6 +27,11 @@
       "description": "Subject id for the user who got the signal",
       "type": ["string","null"],
       "maxLength": 80
+    },
+    "notificationValue": {
+      "description": "Value of the notification selected",
+      "type": ["string","null"],
+      "maxLength": 50
     }
   },
   "additionalProperties": true,
