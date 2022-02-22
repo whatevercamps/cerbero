@@ -6,32 +6,24 @@
     "format": "jsonschema",
     "version": "1-0-0"
   },
-  "description": "Schema for tracking the steps that the user interacted with.",
+  "description": "Schema for tracking the experience added in profesional genome",
   "properties": {
-    "userGgid": {
-      "description": "GgId of the user that applied to the job post",
-      "type": "string",
+    "userGgId": {
+      "description": "GgId of the user that added the experience",
+      "type": ["string", "null"],
       "maxLength": 50
     },
     "experienceId": {
-      "description": "number of the step where the user interacted",
-      "type": ["number", "null"],
-      "minimum": 0,
-      "maximum": 50
-    },
-    "source": {
-      "description": "number of total steps that the job application have",
-      "type": ["number", "null"],
-      "minimum": 0,
-      "maximum": 50
+      "description": "Id of the experience",
+      "type": ["string", "null"],
+      "maxLength": 50
     },
     "experienceType": {
-      "description": "Name of the step",
+      "description": "Type of experience added",
       "type": ["string", "null"],
       "maxLength": 50
     }
   },
   "additionalProperties": true,
-  "type": "object",
-  "required": ["opportunityId", "userGgid"]
+  "type": "object"
 }
