@@ -1,0 +1,37 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "ExperienceAdded",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking the steps that the user interacted with.",
+  "properties": {
+    "userGgid": {
+      "description": "GgId of the user that applied to the job post",
+      "type": "string",
+      "maxLength": 50
+    },
+    "experienceId": {
+      "description": "number of the step where the user interacted",
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 50
+    },
+    "source": {
+      "description": "number of total steps that the job application have",
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 50
+    },
+    "experienceType": {
+      "description": "Name of the step",
+      "type": ["string", "null"],
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": ["opportunityId", "userGgid"]
+}

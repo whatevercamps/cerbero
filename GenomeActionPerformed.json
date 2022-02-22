@@ -1,0 +1,40 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "GenomeActionPerformed",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking the interaction of the user inside the genome",
+  "properties": {
+    "userGgId": {
+      "description": "GgId of the user that interacted with the genome",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "genomeUrl": {
+      "description": "Id of the opportunity",
+      "type": "string",
+      "maxLength": 50
+    },
+    "elementName": {
+      "description": "Name of the element interacted",
+      "type": ["string", "null"],
+      "maxLength": 250
+    },
+    "elementType": {
+      "description": "Type of the element interacted",
+      "type": ["string", "null"],
+      "maxLength": 250
+    },
+    "elementValue": {
+      "description": "Value of the element interacted if apply",
+      "type": ["string", "null"],
+      "maxLength": 200
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": ["genomeUrl"]
+}

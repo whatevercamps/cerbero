@@ -1,0 +1,30 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "UserReferred",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking the start of a job application made by the user.",
+  "properties": {
+    "destination": {
+      "description": "Url where the user gets",
+      "type": "string",
+      "maxLength": 1000
+    },
+    "userGgId": {
+      "description": "GgId of the user that got the referrer",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "referrerCode": {
+      "description": "Code generated when referred",
+      "type": ["string", "null"],
+      "maxLength": 100
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": ["destination"]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "ApplicationStepEntered",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking the steps that the user interacted with.",
+  "properties": {
+    "opportunityId": {
+      "description": "Id of the opportunity the user applied",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "userGgId": {
+      "description": "GgId of the user that applied to the job post",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "stepNumber": {
+      "description": "number of the step where the user interacted",
+      "type": ["string", "null"],
+      "maxLength": 10
+    },
+    "totalSteps": {
+      "description": "number of total steps that the job application have",
+      "type": ["string", "null"],
+      "maxLength": 10
+    },
+    "stepName": {
+      "description": "Name of the step",
+      "type": ["string", "null"],
+      "maxLength": 200
+    },
+    "completionRate": {
+      "description": "Completion percentage of the job application",
+      "type": ["string", "null"],
+      "maxLength": 10
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}
