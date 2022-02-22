@@ -15,7 +15,7 @@
       },
       "userGgid": {
           "description": "GgId of the user that applied to the job post",
-          "type": "string",
+          "type": ["string", "null"],
           "maxLength": 50
       },
       "posterUserGgId": {
@@ -36,5 +36,5 @@
   },
   "additionalProperties": true,
   "type": "object",
-  "required": ["opportunityId", "userGgid"]
+  "required": ["opportunityId"]
 }

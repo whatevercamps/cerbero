@@ -4,106 +4,95 @@
     "vendor": "com.torrelabs",
     "name": "OpportunityContext",
     "format": "jsonschema",
-    "version": "1-0-0"
+    "version": "2-0-0"
   },
-  "description": "Context for the interaction of the user within the platform",
+  "description": "Context for the opportunity",
   "properties": {
-    "interaction": {
-      "description": "Interaction is used to provide more info. about which was the action user was doing when event was originated",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 120
+    "id": {
+      "description": "Id of the opportunity",
+      "type": "string",
+      "maxLength": 20
     },
-    "section": {
-      "description": "Section is used to provide more info. about UI component from which event was originated",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 120
+    "ownerGgId": {
+      "description": "GgId of the user that posted the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 10
     },
-    "channel": {
-      "description": "Channel is used to provide more info. about the channel throught the event was sent (SMS, Email, App, Web page, etc.)",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 120
+    "opportunity": {
+      "description": "Name of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 500
     },
-    "path": {
-      "description": "Channel is used to provide the url information",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 1000
+    "objective": {
+      "description": "Objective of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 500
     },
-    "pageType": {
-      "description": "pageType is used to provide more info. about repository and navigation context from which event was originated",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 120
+    "theme": {
+      "description": "Theme of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 50
     },
-    "onboarding": {
-      "description": "True if user was folling one onboarding flow",
-      "type": [
-        "boolean",
-        "null"
-      ]
+    "completion": {
+      "description": "Completion rate of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 10
+    },
+    "compensationValue": {
+      "description": "Compensation value of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 100
+    },
+    "compensationVisible": {
+      "description": "Is the compensation visible",
+      "type": ["boolean", "null"]
+    },
+    "periodicity": {
+      "description": "Periodicity of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "created": {
+      "description": "Date of the creation of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "deadline": {
+      "description": "Date of the deadline of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "stableOn": {
+      "description": "StableOn property",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "externalApplicationUrl": {
+      "description": "Url of the external application",
+      "type": ["string", "null"],
+      "maxLength": 4000
+    },
+    "externalInfoSourceUrl": {
+      "description": "Url of the external info source of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 4000
+    },
+    "crawled": {
+      "description": "If the opportunity is a crawled one",
+      "type": ["boolean", "null"]
+    },
+    "status": {
+      "description": "Status of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 50
     },
     "locale": {
-      "description": "Locale for the Opportunity job post (es/en)",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 12
-    },
-    "flow": {
-      "description": "Flow queryParam if exists",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 80
-    },
-    "source": {
-      "description": "source queryParam if exists",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 80
-    },
-    "next": {
-      "description": "Next query param if it's exists",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 420
-    },
-    "intent": {
-      "description": "Intent query param if it's exists",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 420
-    },
-    "medium": {
-      "description": "Medium query param if it's exists",
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 420
+      "description": "Locale property of the opportunity",
+      "type": ["string", "null"],
+      "maxLength": 400
     }
   },
   "additionalProperties": true,
-  "type": "object"
+  "type": "object",
+  "required": ["id"]
 }

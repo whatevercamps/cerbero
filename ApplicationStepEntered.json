@@ -2,7 +2,7 @@
   "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
   "self": {
     "vendor": "com.torrelabs",
-    "name": "ApplicationFlowStepEntered",
+    "name": "ApplicationStepEntered",
     "format": "jsonschema",
     "version": "1-0-0"
   },
@@ -10,44 +10,35 @@
   "properties": {
     "opportunityId": {
       "description": "Id of the opportunity the user applied",
-      "type": "string",
+      "type": ["string", "null"],
       "maxLength": 50
     },
-    "userGgid": {
+    "userGgId": {
       "description": "GgId of the user that applied to the job post",
-      "type": "string",
+      "type": ["string", "null"],
       "maxLength": 50
     },
     "stepNumber": {
       "description": "number of the step where the user interacted",
-      "type": ["number", "null"],
-      "minimum": 0,
-      "maximum": 50
+      "type": ["string", "null"],
+      "maxLength": 10
     },
     "totalSteps": {
       "description": "number of total steps that the job application have",
-      "type": ["number", "null"],
-      "minimum": 0,
-      "maximum": 50
+      "type": ["string", "null"],
+      "maxLength": 10
     },
     "stepName": {
       "description": "Name of the step",
       "type": ["string", "null"],
-      "maxLength": 50
+      "maxLength": 200
     },
     "completionRate": {
       "description": "Completion percentage of the job application",
-      "type": ["number", "null"],
-      "minimum": 0,
-      "maximum": 50
-    },
-    "stepValue": {
-      "description": "value of the step",
       "type": ["string", "null"],
-      "maxLength": 50
+      "maxLength": 10
     }
   },
   "additionalProperties": true,
-  "type": "object",
-  "required": ["opportunityId", "userGgid"]
+  "type": "object"
 }
