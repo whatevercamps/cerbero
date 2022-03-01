@@ -1,0 +1,95 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "CompatibilityReports",
+    "format": "jsonschema",
+    "version": "2-0-0"
+  },
+  "description": "Compatibility reports",
+  "properties": {
+    "event": {
+      "description": "Type of compatibility reports event",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "userPublicId": {
+      "description": "Public id of the user",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "targetId": {
+      "description": "Id of the target",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "sourceId": {
+      "description": "Id of the source",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "targetEntityType": {
+      "description": "Entity type of the target",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "sourceEntityType": {
+      "description": "Entity type of the source",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "url": {
+      "description": "Full url",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "testType": {
+      "description": "Behavioral test type",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "context": {
+      "description": "Additional data of the tracking",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "event"
+  ]
+}
