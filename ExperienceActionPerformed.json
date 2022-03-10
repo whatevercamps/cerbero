@@ -2,39 +2,33 @@
   "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
   "self": {
     "vendor": "com.torrelabs",
-    "name": "GenomeActionPerformed",
+    "name": "ExperienceActionPerformed",
     "format": "jsonschema",
     "version": "1-0-0"
   },
-  "description": "Schema for tracking the interaction of the user inside the genome",
+  "description": "Schema for tracking the action performed inside the add experience section",
   "properties": {
     "userGgId": {
-      "description": "GgId of the user that interacted with the genome",
+      "description": "GgId of the user that interacted",
       "type": ["string", "null"],
       "maxLength": 50
     },
-    "genomePath": {
-      "description": "path of the genome that was interacted",
-      "type": "string",
-      "maxLength": 50
-    },
-    "elementName": {
-      "description": "Name of the element interacted",
+    "experienceId": {
+      "description": "Id of the experience if interacted with one",
       "type": ["string", "null"],
-      "maxLength": 250
+      "maxLength": 50
     },
     "elementType": {
       "description": "Type of the element interacted",
       "type": ["string", "null"],
-      "maxLength": 250
+      "maxLength": 150
     },
     "elementValue": {
-      "description": "Value of the element interacted if apply",
+      "description": "Value of the element interacted with",
       "type": ["string", "null"],
       "maxLength": 400
     }
   },
   "additionalProperties": true,
-  "type": "object",
-  "required": ["genomePath"]
+  "type": "object"
 }
