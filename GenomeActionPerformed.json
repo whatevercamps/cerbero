@@ -13,8 +13,8 @@
       "type": ["string", "null"],
       "maxLength": 50
     },
-    "genomeUrl": {
-      "description": "Id of the opportunity",
+    "genomePath": {
+      "description": "path of the genome that was interacted",
       "type": "string",
       "maxLength": 50
     },
@@ -31,10 +31,10 @@
     "elementValue": {
       "description": "Value of the element interacted if apply",
       "type": ["string", "null"],
-      "maxLength": 200
+      "maxLength": 400
     }
   },
   "additionalProperties": true,
   "type": "object",
-  "required": ["genomeUrl"]
+  "required": ["genomePath"]
 }

@@ -1,0 +1,48 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "PipelineActionPerformed",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking the interaction of the user inside the pipeline",
+  "properties": {
+    "opportunityId": {
+      "description": "Opportunity id of the pipeline",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "userGgId": {
+      "description": "GgId of the user that interacted with the pipeline",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "candidateId": {
+      "description": "Candidate id of the candidate card that was interacted in the pipeline",
+      "type": ["string", "null"],
+      "maxLength": 50
+    },
+    "elementName": {
+      "description": "element name that was interacted",
+      "type": ["string", "null"],
+      "maxLength": 250
+    },
+    "elementType": {
+      "description": "element type that was interacted",
+      "type": ["string", "null"],
+      "maxLength": 250
+    },
+    "elementValue": {
+      "description": "element value that was interacted",
+      "type": ["string", "null"],
+      "maxLength": 400
+    },
+    "candidateMoved": {
+      "description": "True if the candidate was moved",
+      "type": ["boolean", "null"]
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}
