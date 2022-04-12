@@ -1,0 +1,106 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "self": {
+        "vendor": "com.torrelabs",
+        "name": "match_distributed",
+        "format": "jsonschema",
+        "version": "3-0-0"
+    },
+    "description": "Schema to store Opportunity match information",
+    "properties": {
+        "method": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 50
+        },
+        "provider": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 50
+        },
+        "model": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 1000
+        },
+        "opportunity_ref": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 1000
+        },
+        "opportunity_external": {
+            "type": [
+                "boolean",
+                "null"
+            ]
+        },
+        "opportunity_market": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 1000
+        },
+        "opportunity_remote": {
+            "type": [
+                "boolean",
+                "null"
+            ]
+        },
+        "opportunity_type": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 1000
+        },
+        "opportunity_crawled": {
+            "type": [
+                "boolean",
+                "null"
+            ]
+        },
+        "opportunity_locations": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 1000
+        },
+        "seeker_experiments": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 1000
+        },
+        "subject_id": {
+            "type": [
+                "string"
+            ],
+            "maxLength": 100
+        },
+        "feature_flag": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "maxLength": 100
+        },
+        "job_to_person_score": {
+            "type": [
+                "integer"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "type": "object"
+}
