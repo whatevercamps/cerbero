@@ -84,7 +84,8 @@
         },
         "subject_id": {
             "type": [
-                "string"
+                "string",
+                "null"
             ],
             "maxLength": 100
         },
@@ -97,10 +98,13 @@
         },
         "job_to_person_score": {
             "type": [
-                "integer"
-            ]
+				"number",
+				"null"
+			],
+			"minimum": -1,
+            "maximum": 100
         }
     },
-    "additionalProperties": false,
+    "additionalProperties": true,
     "type": "object"
 }
