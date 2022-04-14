@@ -9,6 +9,7 @@
     "description": "Schema to store Opportunity match information",
     "properties": {
         "method": {
+            "description": "Notification method (by Email)",
             "type": [
                 "string",
                 "null"
@@ -16,6 +17,7 @@
             "maxLength": 50
         },
         "provider": {
+            "description": "The service that generates the notification (Pathfinder)",
             "type": [
                 "string",
                 "null"
@@ -23,6 +25,7 @@
             "maxLength": 50
         },
         "model": {
+            "description": "Match type",
             "type": [
                 "string",
                 "null"
@@ -30,6 +33,7 @@
             "maxLength": 1000
         },
         "opportunity_ref": {
+            "description": "Matched opportunity reference",
             "type": [
                 "string",
                 "null"
@@ -37,12 +41,14 @@
             "maxLength": 1000
         },
         "opportunity_external": {
+            "description": "is External?",
             "type": [
                 "boolean",
                 "null"
             ]
         },
         "opportunity_market": {
+            "description": "Opportunity market",
             "type": [
                 "string",
                 "null"
@@ -50,12 +56,14 @@
             "maxLength": 1000
         },
         "opportunity_remote": {
+            "description": "is Remote?",
             "type": [
                 "boolean",
                 "null"
             ]
         },
         "opportunity_type": {
+            "description": "Opportunity type",
             "type": [
                 "string",
                 "null"
@@ -63,12 +71,14 @@
             "maxLength": 1000
         },
         "opportunity_crawled": {
+            "description": "is Crawled?",
             "type": [
                 "boolean",
                 "null"
             ]
         },
         "opportunity_locations": {
+            "description": "Opportunity locations",
             "type": [
                 "string",
                 "null"
@@ -76,6 +86,7 @@
             "maxLength": 1000
         },
         "seeker_experiments": {
+            "description": "Experiments that the user is part of",
             "type": [
                 "string",
                 "null"
@@ -83,12 +94,15 @@
             "maxLength": 1000
         },
         "subject_id": {
+            "description": "User's subject id",
             "type": [
-                "string"
+                "string",
+                "null"
             ],
             "maxLength": 100
         },
         "feature_flag": {
+            "description": "User's feature flags",
             "type": [
                 "string",
                 "null"
@@ -96,11 +110,15 @@
             "maxLength": 100
         },
         "job_to_person_score": {
+            "description": "Score from opportunities/_eval",
             "type": [
-                "integer"
-            ]
+				"number",
+				"null"
+			],
+			"minimum": -1,
+            "maximum": 100
         }
     },
-    "additionalProperties": false,
+    "additionalProperties": true,
     "type": "object"
 }
