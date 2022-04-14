@@ -1,0 +1,38 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "RelationshipContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for relationship (between two users) context in all related events",
+  "properties": {
+    "type": {
+      "description": "Category type for the relationship",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "relationship": {
+      "description": "name for the relationship",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "duration": {
+      "description": "duration for the relationship",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

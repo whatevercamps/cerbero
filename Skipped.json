@@ -4,17 +4,33 @@
         "vendor": "com.torrelabs",
         "name": "Skipped",
         "format": "jsonschema",
-        "version": "1-0-0"
+        "version": "2-0-0"
     },
     "description": "Schema for tracking the skip event",
     "properties": {
-        "elementName": {
-            "description": "Name of the element that got skipped",
-            "type": "string",
-            "maxLength": 50
-        }
+      "section": {
+        "description": "Section from event has been triggered",
+        "type": "string",
+        "maxLength": 210
+      },
+      "flow": {
+        "description": "Flow extracted from route where event has been triggered",
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 210
+      },
+      "userGgId": {
+        "description": "gg id of the user",
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 50
+      }
     },
     "additionalProperties": true,
     "type": "object",
-    "required": ["elementName"]
+    "required": ["section"]
 }

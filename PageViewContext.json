@@ -1,0 +1,30 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "PageViewContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for all traints related with page view event",
+  "properties": {
+    "flow": {
+      "description": "Some pages have a detailed flow in which depends view/behavior inside the page",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 420
+    },
+    "trackingId": {
+      "description": "User's generated tracking Id (generated in Bifrost from uuid) and used to track all events from a same user",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 420
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

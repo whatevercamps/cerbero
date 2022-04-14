@@ -1,0 +1,39 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "VerificationRequestSent",
+    "format": "jsonschema",
+    "version": "1-0-1"
+  },
+  "description": "Schema for verification request sent",
+  "properties": {
+    "id": {
+      "description": "Id of the verification request",
+      "type": "string",
+      "maxLength": 120
+    },
+    "relationship": {
+      "description": "relationship for the verification request",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "consecutiveRounds": {
+      "description": "number of the consecutive rounds (verifications requests) before",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "id"
+  ]
+}

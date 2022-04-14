@@ -4,7 +4,7 @@
     "vendor": "com.torrelabs",
     "name": "OpportunityContext",
     "format": "jsonschema",
-    "version": "3-0-0"
+    "version": "2-0-0"
   },
   "description": "Context for the opportunity",
   "properties": {
@@ -35,9 +35,8 @@
     },
     "completion": {
       "description": "Completion rate of the opportunity",
-      "type": ["number", "null"],
-      "minimum": 0,
-      "maximum": 10
+      "type": ["string", "null"],
+      "maxLength": 10
     },
     "compensationValue": {
       "description": "Compensation value of the opportunity",
