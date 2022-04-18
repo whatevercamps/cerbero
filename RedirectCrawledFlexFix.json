@@ -10,8 +10,7 @@
   "properties": {
       "trackingId": {
           "description": "Tracking id of the opportunity the user applied",
-          "type": "integer",
-          "maxLength": 50
+          "type": "integer"
       },
       "userGgid": {
           "description": "GgId of the user that applied to the job post",
