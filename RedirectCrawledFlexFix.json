@@ -10,7 +10,9 @@
   "properties": {
       "trackingId": {
           "description": "Tracking id of the opportunity the user applied",
-          "type": "integer"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
       },
       "userGgid": {
           "description": "GgId of the user that applied to the job post",
@@ -20,5 +22,5 @@
   },
   "additionalProperties": true,
   "type": "object",
-  "required": ["opportunityId"]
+  "required": ["trackingId"]
 }
