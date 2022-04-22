@@ -1,0 +1,47 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "RecommendationRequestSent",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for recommendation request sent event",
+  "properties": {
+    "relationship": {
+      "description": "relationship for the recommendation request",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "weight": {
+      "description": "Estimated weight for this recommendation request",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    },
+    "onboarding": {
+      "description": "True if this recommendation request belongs to an onboarding flow",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "round": {
+      "description": "number of the consecutive rounds (recommendations requests) before",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

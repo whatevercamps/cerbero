@@ -1,0 +1,38 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "PreferencesSet",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema to track the set of preferences a user has set",
+  "properties": {
+    "field": {
+      "description": "The name of the field that was set",
+      "type": "string",
+      "maxLength": 35
+    },
+    "value": {
+      "description": "The value that was set",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2000
+    },
+    "interest": {
+      "description": "The interest that was set",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 75
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "field"
+  ]
+}

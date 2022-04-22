@@ -1,0 +1,265 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "DiscoverySearchPerformance",
+    "format": "jsonschema",
+    "version": "2-0-0"
+  },
+  "description": "Schema to track search performance",
+  "properties": {
+    "searchTarget": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "searchId": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string"
+      ]
+    },
+    "searchSessionId": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "serverSessionId": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "responseTime": {
+      "description": "",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "filterCompensation": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterCompensationRange": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterJob": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterLocation": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterLanguages": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterName": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterOpportunityType": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterOrganization": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterRemoter": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterRole": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterSignaledBy": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterSignalersOf": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterSkill": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterSkillRole": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "results": {
+      "description": "",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "aggregations": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "eventText": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sendAt": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "subjectId": {
+      "description": "",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "tester": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "filterBestFor": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterDreamJobs": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterRemote": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterStatus": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filterTimezone": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extraPropertyToFail": {
+      "description": "",
+      "maxLength": 255,
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "searchId",
+    "extraPropertyToFail"
+  ]
+}

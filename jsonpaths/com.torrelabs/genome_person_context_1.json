@@ -1,0 +1,26 @@
+{
+    "jsonpaths": [
+        "$.schema.vendor",
+        "$.schema.name",
+        "$.schema.format",
+        "$.schema.version",
+        "$.hierarchy.rootId",
+        "$.hierarchy.rootTstamp",
+        "$.hierarchy.refRoot",
+        "$.hierarchy.refTree",
+        "$.hierarchy.refParent",
+        "$.data.bioCompletion",
+        "$.data.email",
+        "$.data.ggId",
+        "$.data.hasBio",
+        "$.data.hasPicture",
+        "$.data.isTest",
+        "$.data.locale",
+        "$.data.name",
+        "$.data.phone",
+        "$.data.professionalHeadline",
+        "$.data.publicId",
+        "$.data.subjectId",
+        "$.data.weight"
+    ]
+}

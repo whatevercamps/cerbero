@@ -1,0 +1,106 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "match_distributed",
+    "format": "jsonschema",
+    "version": "2-0-0"
+  },
+  "description": "Schema to store Opportunity match information",
+  "properties": {
+    "method": {
+      "description": "Something",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "provider": {
+      "description": "Something",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "model": {
+      "description": "Something",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "opportunity_ref": {
+      "description": "Something",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "opportunity_external": {
+      "description": "Something",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "opportunity_market": {
+      "description": "Something",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "opportunity_remote": {
+      "description": "Something",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "opportunity_type": {
+      "description": "Something",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "opportunity_crawled": {
+      "description": "Something",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "opportunity_locations": {
+      "description": "Something",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "seeker_experiments": {
+      "description": "Something",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "subject_id": {
+      "description": "Something",
+      "type": [
+        "string"
+      ],
+      "maxLength": 100
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
+}

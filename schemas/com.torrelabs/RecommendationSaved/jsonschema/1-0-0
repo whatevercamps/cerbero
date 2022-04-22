@@ -1,0 +1,63 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "RecommendationSaved",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for recommendation saved sent event",
+  "properties": {
+    "id": {
+      "description": "Id of the recommendation saved",
+      "type": "string",
+      "maxLength": 120
+    },
+    "relationship": {
+      "description": "relationship for the recommendation saved",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "weight": {
+      "description": "Estimated weight for this recommendation saved",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    },
+    "recommendationRequestId": {
+      "description": "Id of the recommendation request if it exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "verificationId": {
+      "description": "Id of the verification if it exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "recommendationFlow": {
+      "description": "Flow for this recommendation saved (edit-recommendation-request, one-click-recommend, etc.)",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "id"
+  ]
+}

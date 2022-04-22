@@ -1,0 +1,109 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "InteractionContext",
+    "format": "jsonschema",
+    "version": "3-0-1"
+  },
+  "description": "Context for the interaction of the user within the platform",
+  "properties": {
+    "interaction": {
+      "description": "Interaction is used to provide more info. about which was the action user was doing when event was originated",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "section": {
+      "description": "Section is used to provide more info. about UI component from which event was originated",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "channel": {
+      "description": "Channel is used to provide more info. about the channel throught the event was sent (SMS, Email, App, Web page, etc.)",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "path": {
+      "description": "Channel is used to provide the url information",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "pageType": {
+      "description": "pageType is used to provide more info. about repository and navigation context from which event was originated",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "onboarding": {
+      "description": "True if user was folling one onboarding flow",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "locale": {
+      "description": "Locale for the Opportunity job post (es/en)",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "flow": {
+      "description": "Flow queryParam if exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 80
+    },
+    "source": {
+      "description": "source queryParam if exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 80
+    },
+    "next": {
+      "description": "Next query param if it's exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 420
+    },
+    "intent": {
+      "description": "Intent query param if it's exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 420
+    },
+    "medium": {
+      "description": "Medium query param if it's exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 420
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

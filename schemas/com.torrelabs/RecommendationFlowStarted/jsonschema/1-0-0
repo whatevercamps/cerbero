@@ -1,0 +1,30 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "RecommendationFlowStarted",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking the start of the recommendation flow",
+  "properties": {
+    "flow": {
+      "description": "Flow from verification: ASK, RECOMMEND",
+      "type": "string",
+      "maxLength": 50
+    },
+    "targetGgId": {
+      "description": "Target ggId of the recommendation",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "flow"
+  ]
+}

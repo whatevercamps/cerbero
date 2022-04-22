@@ -1,0 +1,50 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "Signaled",
+    "format": "jsonschema",
+    "version": "2-0-0"
+  },
+  "description": "Schema for Opportunity contexts in all related events",
+  "properties": {
+    "type": {
+      "description": "Type of the singal: back or first",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 80
+    },
+    "targetGenomeType": {
+      "description": "Type of the signaled genome (person/team)",
+      "type": "string",
+      "maxLength": 80
+    },
+    "sourceGenomeType": {
+      "description": "Type of the signaled genome (person/team)",
+      "type": "string",
+      "maxLength": 80
+    },
+    "sourceId": {
+      "description": "Subject id for the user who sent the signal",
+      "type": "string",
+      "maxLength": 80
+    },
+    "targetId": {
+      "description": "Subject id for the user who got the signal",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 80
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "targetGenomeType",
+    "sourceGenomeType",
+    "sourceId"
+  ]
+}
