@@ -1,0 +1,47 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "SharingOptionSelected",
+    "format": "jsonschema",
+    "version": "1-0-4"
+  },
+  "description": "Schema for a sharing option selected event",
+  "properties": {
+    "shareMedium": {
+      "description": "Medium by which you are trying to share a resource",
+      "type": "string",
+      "maxLength": 120
+    },
+    "pageType": {
+      "description": "Site where the resource is being shared (genome, job-posting)",
+      "type": "string",
+      "maxLength": 120
+    },
+    "pageSection": {
+      "description": "Resource to be shared",
+      "type": "string",
+      "maxLength": 120
+    },
+    "isTester": {
+      "description": "True when event was tracked in a test enviroment or user is a tester user",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "identifier": {
+      "description": "Resource public identifier (for genomes, publicId; for jobs, jobId)",
+      "type": "string",
+      "maxLength": 120
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "shareMedium",
+    "pageType",
+    "pageSection",
+    "identifier"
+  ]
+}

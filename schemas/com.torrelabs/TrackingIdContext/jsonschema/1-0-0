@@ -1,0 +1,30 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "TrackingIdContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking context in all related events",
+  "properties": {
+    "trackingId": {
+      "description": "User's generated tracking Id (generated in Bifrost using UUID protocol) and used to track all events from a same user",
+      "type": "string",
+      "maxLength": 420
+    },
+    "subjectId": {
+      "description": "Optional subjectId of the user with this trackingId",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 420
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "trackingId"
+  ]
+}

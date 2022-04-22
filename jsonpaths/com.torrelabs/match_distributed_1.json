@@ -1,0 +1,24 @@
+{
+    "jsonpaths": [
+        "$.schema.vendor",
+        "$.schema.name",
+        "$.schema.format",
+        "$.schema.version",
+        "$.hierarchy.rootId",
+        "$.hierarchy.rootTstamp",
+        "$.hierarchy.refRoot",
+        "$.hierarchy.refTree",
+        "$.hierarchy.refParent",
+        "$.data.method",
+        "$.data.model",
+        "$.data.opportunity_crawled",
+        "$.data.opportunity_external",
+        "$.data.opportunity_locations",
+        "$.data.opportunity_market",
+        "$.data.opportunity_ref",
+        "$.data.opportunity_remote",
+        "$.data.opportunity_type",
+        "$.data.provider",
+        "$.data.seeker_experiments"
+    ]
+}

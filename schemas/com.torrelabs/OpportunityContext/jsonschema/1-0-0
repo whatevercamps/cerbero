@@ -1,0 +1,242 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "OpportunityContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for Opportunity contexts in all related events",
+  "properties": {
+    "id": {
+      "description": "Id for the Opportunity",
+      "type": "string",
+      "maxLength": 210
+    },
+    "objective": {
+      "description": "objective for the Opportunity",
+      "type": "string",
+      "maxLength": 120
+    },
+    "slug": {
+      "description": "Slug for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "commitmentCode": {
+      "description": "Code of the Opportunity commitment",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "timezone": {
+      "description": "timezone of the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "startDate": {
+      "description": "date of starting work for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "agreementType": {
+      "description": "Type of agreement for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "completion": {
+      "description": "Level of completion of the Opportunity post",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    },
+    "language": {
+      "description": "language of the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "remote": {
+      "description": "True if Opportunity accepts remote working, false otherwise",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "remoteAnywhere": {
+      "description": "True if Opportunity accepts working remotely everywhere, false otherwise",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "remoteTimezone": {
+      "description": "True if Opportunity only accepts working remotely in the same timezone of the Opportunity's place, false otherwise",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "locations": {
+      "description": "Locations for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "sponsorVisa": {
+      "description": "sponsorVisa for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "compensationCurrency": {
+      "description": "compensationCurrency for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "compensationMax": {
+      "description": "maximum compensation for the Opportunity",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000000
+    },
+    "compensationMin": {
+      "description": "minimum compensation for the Opportunity",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000000
+    },
+    "compensationPeriodicity": {
+      "description": "compensationPeriodicity for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "hasAttachments": {
+      "description": "True if Opportunity has attachments, false otherwise",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "created": {
+      "description": "Date of creation for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "deadline": {
+      "description": "Date of deadline for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "stableOn": {
+      "description": "stableOn date for the Opportunity",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "boardVersion": {
+      "description": "boardVersion date for the Opportunity job post",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "externalInfoSourceUrl": {
+      "description": "externalInfoSourceUrl for the Opportunity job post",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "crawled": {
+      "description": "True if Opportunity was crawled, false otherwise",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "status": {
+      "description": "Status for the Opportunity job post",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "locale": {
+      "description": "Locale for the Opportunity job post (es/en)",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "published": {
+      "description": "True if Opportunity is published at the moment of event is sent, false otherwise",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "finishedApplications": {
+      "description": "Number of finished applications at the moment of event sending",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000000
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "id",
+    "objective"
+  ]
+}

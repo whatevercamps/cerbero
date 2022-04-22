@@ -1,0 +1,118 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "GenomePersonContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for genome user context in all related events",
+  "properties": {
+    "subjectId": {
+      "description": "SubjectId of the user",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    },
+    "name": {
+      "description": "The name of the user",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "email": {
+      "description": "The email of the user",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 420
+    },
+    "publicId": {
+      "description": "publicId of the user",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "hasPicture": {
+      "description": "True if user has picture set, false otherwise",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "hasBio": {
+      "description": "True if user has bio, false otherwise",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "bioCompletion": {
+      "description": "completion value of the user's bio",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 10
+    },
+    "locale": {
+      "description": "Locale of the user (es or en)",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "professionalHeadline": {
+      "description": "Headline of the user genome",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 420
+    },
+    "phone": {
+      "description": "phone of the user",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    },
+    "weight": {
+      "description": "weight of the user genome",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    },
+    "isTest": {
+      "description": "True if user is a tester user",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ggId": {
+      "description": "ggIg of the user",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 210
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

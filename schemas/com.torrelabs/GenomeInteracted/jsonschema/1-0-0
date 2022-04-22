@@ -1,0 +1,22 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "GenomeInteracted",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for tracking the click event in buttons on genome ui",
+  "properties": {
+    "buttonName": {
+      "description": "Name of the button clicked",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

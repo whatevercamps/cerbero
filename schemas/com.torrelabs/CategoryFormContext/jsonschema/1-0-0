@@ -1,0 +1,100 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "CategoryFormContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for the context of the category form",
+  "properties": {
+    "id": {
+      "description": "id of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "name": {
+      "description": "name of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "contributions": {
+      "description": "contributions property of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "fromMonth": {
+      "description": "from month property of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "fromYear": {
+      "description": "from year property of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "toMonth": {
+      "description": "to month property of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "toYear": {
+      "description": "to year property of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "additionalInfo": {
+      "description": "additional info of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "highlighted": {
+      "description": "highlighted property of the category form",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "remote": {
+      "description": "remote property of the category form",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "relatedLinks": {
+      "description": "related links property of the category form",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

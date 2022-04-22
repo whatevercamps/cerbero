@@ -1,0 +1,54 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "VerificationSaved",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for verification saved sent event",
+  "properties": {
+    "id": {
+      "description": "Id of the verification saved",
+      "type": "string",
+      "maxLength": 120
+    },
+    "relationship": {
+      "description": "relationship for the verification saved",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "verificationRequestId": {
+      "description": "Id of the verification request if it exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "recommendationId": {
+      "description": "Id of the recommendation if it exists",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "verificationFlow": {
+      "description": "Flow for this verification saved (edit-verification-request, one-click-recommend, etc.)",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "id"
+  ]
+}

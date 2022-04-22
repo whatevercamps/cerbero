@@ -1,0 +1,54 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "ReferrerContext",
+    "format": "jsonschema",
+    "version": "2-0-0"
+  },
+  "description": "Schema for user context in all related events",
+  "properties": {
+    "referralTrackingId": {
+      "description": "trackingId of the referral",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "referrerTrackingId": {
+      "description": "referrerTrackingId for tracking",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "referrerCode": {
+      "description": "referrerCode for tracking",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "allReferrerCodes": {
+      "description": "all historical referrer codes before sign up",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "referrerDestination": {
+      "description": "referrerDestination for tracking",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

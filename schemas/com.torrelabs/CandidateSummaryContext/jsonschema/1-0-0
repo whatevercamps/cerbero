@@ -1,0 +1,101 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "CandidateSummaryContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for context of candidate summary",
+  "properties": {
+    "id": {
+      "description": "Id of the candidate",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "columnId": {
+      "description": "column id where the candidate was",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "columnLastUpdated": {
+      "description": "Last column updated",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "position": {
+      "description": "Position of the candidate",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 120,
+      "maximum": 123
+    },
+    "interested": {
+      "description": "interested property of the candidate summary",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "retracted": {
+      "description": "retracted property of the candidate summary",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "preMatched": {
+      "description": "prematched property of the candidate summary",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "publicApplication": {
+      "description": "publicApplication property of the candidate summary",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "reviewed": {
+      "description": "reviewed property of the candidate summary",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "reviewedFrom": {
+      "description": "reviewedFrom property of the candidate summary",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "stage": {
+      "description": "stage property of the candidate summary",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": true,
+  "type": "object"
+}

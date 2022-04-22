@@ -1,0 +1,41 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "ContactsConnected",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for contacts connected succesfully with torre",
+  "properties": {
+    "contactsSource": {
+      "description": "Source of the event in the UI",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "intent": {
+      "description": "Name of the flow where the invite is made",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "sourceGgId": {
+      "description": "Ggid of the user that made the invite",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": true,
+  "type": "object",
+  "required": [
+    "userGgId"
+  ]
+}
