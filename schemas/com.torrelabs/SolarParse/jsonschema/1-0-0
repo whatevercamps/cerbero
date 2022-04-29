@@ -1,0 +1,48 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "SolarParse",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Schema for track cv parse performance",
+  "properties": {
+    "parseTool": {
+      "description": "Tool used to parse",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "sroven",
+        "affinda"
+      ]
+    },
+    "importGroup": {
+      "description": "importGroup",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 30,
+      "maxLength": 40
+    },
+    "typeOfRecord": {
+      "description": "Description of the modification",
+      "type": "string",
+      "enum": [
+        "deleted",
+        "updated",
+        "imported",
+        "toolError",
+        "parseError"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "typeOfRecord"
+  ]
+}
