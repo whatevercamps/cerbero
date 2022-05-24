@@ -1,0 +1,50 @@
+{
+  "description" : "Schema for variant SMS message sent event",
+  "properties" : {
+    "variant" : {
+      "description" : "Identifier of the variant message sent",
+      "type" : "string",
+      "maxLength" : 420
+    },
+    "message" : {
+      "description" : "Body of the message sent",
+      "type" : "string",
+      "maxLength" : 420
+    },
+    "sourcePersonId" : {
+      "description" : "Id of the person who sent the message",
+      "type" : [
+        "string",
+        "null"
+      ],
+      "maxLength" : 120
+    },
+    "targetContactId" : {
+      "description" : "Id of the contact who received the message",
+      "type" : "string",
+      "maxLength" : 120
+    },
+    "campaign" : {
+      "description" : "Identifier for the campaign",
+      "type" : [
+        "string",
+        "null"
+      ],
+      "maxLength" : 120
+    }
+  },
+  "additionalProperties" : true,
+  "type" : "object",
+  "required" : [
+    "message",
+    "variant",
+    "targetContactId"
+  ],
+  "self" : {
+    "vendor" : "com.torrelabs",
+    "name" : "MessageVariantSent",
+    "format" : "jsonschema",
+    "version" : "1-0-0"
+  },
+  "$schema" : "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#"
+}
