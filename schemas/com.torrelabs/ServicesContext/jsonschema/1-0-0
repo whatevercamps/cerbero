@@ -1,0 +1,30 @@
+{
+  "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self": {
+    "vendor": "com.torrelabs",
+    "name": "ServicesContext",
+    "format": "jsonschema",
+    "version": "1-0-0"
+  },
+  "description": "Describes the services or subscriptions that were active when the event ocurred",
+  "properties": {
+    "personServices": {
+      "description": "A list of all the services that are active for the user when the event was performed",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4800
+    },
+    "organizationServices": {
+      "description": "A list of all the services that are active for the organization when the event was performed",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4800
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
+}
